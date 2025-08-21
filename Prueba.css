@@ -19,6 +19,7 @@ html {
 }
 
 
+
 .container {
 	max-width: 120rem;
 	margin: 0 auto;
@@ -61,7 +62,7 @@ html {
 
 .container-user {
 	display: flex;
-	gap: 5rem;
+	gap: rem;
 	cursor: pointer;
 }
 
@@ -210,7 +211,7 @@ html {
 	border: 2px solid #F9FCFC;
 	border-radius: 2rem;
 	background-color: #F9FCFC;
-	height: 4rem;
+	height: 3.8rem;
 	overflow: hidden;
 }
 
@@ -236,7 +237,7 @@ html {
 	align-items: center;
 	justify-content: center;
 	height: 100%;
-	padding: 2rem;
+	padding: 1rem;
 }
 
 .btn-search i {
@@ -245,8 +246,8 @@ html {
 }
 
 .banner {
-	background-image: linear-gradient(100deg, #000000, #00000020),
-		url('https://images.stockx.com/360/New-Balance-9060-Triple-Black/Images/New-Balance-9060-Triple-Black/Lv2/img01.jpg?w=576&q=60&dpr=1&updated_at=1724332800&h=384');
+	background-image: linear-gradient(100deg, #00000090, #00000030),
+		url(https://images-cs.stockx.com/v3/assets/blt818b0c67cf450811/bltcc0be78021ed4a70/688a6a1906329461e646a0e8/ES-Labubu_Evergreen_BannerPrimary_Desktop.jpg?auto=webp&format=pjpg&quality=75&dpr=2&width=1246);
 	height: 60rem;
 	background-size: cover;
 	background-position: center;
@@ -266,7 +267,7 @@ html {
 }
 
 .content-banner h2 {
-	color: #F9FCFC;
+	color: #EFDCFF;
 	font-size: 3.5rem;
 	font-weight: 500;
 	line-height: 1.2;
@@ -276,30 +277,38 @@ html {
 	margin-top: 2rem;
 	text-decoration: none;
 	color: #4A4A49;
-	background-color: #EFDCFF;
+	background-color: #FFDF8C;
 	display: inline-block;
 	padding: 1rem 3rem;
 	text-transform: uppercase;
 	border-radius: 3rem;
 }
 
+
 .audio-section {
-  background: #f9f9f9;
-  padding: 30px 0;
+  background: linear-gradient(90deg, #EFDCFF 20%, #FFDF8C 80%);
+  padding: 40px 0;
   text-align: center;
-  border-radius: 10px;
+  margin: 0rem auto;
+  max-width: 20000px;
 }
 
 .audio-section h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-size: 2.4rem;
+  margin-bottom: 18px;
   color: #4A4A49;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .audio-section audio {
-  width: 100%;
+  width: 90%;
   max-width: 400px;
   outline: none;
+  border-radius: 8px;
+  background: #F9FCFC;
+  margin: 0 auto;
+  display: block;
 }
 
 
@@ -401,7 +410,7 @@ html {
 
 .card-category p {
 	font-size: 2.5rem;
-	color: #F9FCFC;
+	color: #EFDCFF;
 	text-transform: capitalize;
 	position: relative;
 }
