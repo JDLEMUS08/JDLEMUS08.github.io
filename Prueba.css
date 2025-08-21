@@ -57,26 +57,11 @@ html {
 	flex-direction: column;
 }
 
-.container-logo {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-}
 
-.container-logo i {
-	font-size: 3rem;
-}
-
-.container-logo h1 a {
-	text-decoration: none;
-	color: #4A4A49;
-	font-size: 3rem;
-	letter-spacing: -1px;
-}
 
 .container-user {
 	display: flex;
-	gap: 1rem;
+	gap: 5rem;
 	cursor: pointer;
 }
 
@@ -93,6 +78,28 @@ html {
 	padding-left: 1rem;
 }
 
+.container-user {
+	display: flex;
+	align-items: right;
+	gap: 5rem;
+}
+
+.container-user i {
+	font-size: 3rem;
+}
+
+.container-user h1 a {
+	text-decoration: none;
+	color: #4A4A49;
+	font-size: 3rem;
+	letter-spacing: -1px;
+	border-bottom: none;
+	pointer-events: none;
+	cursor: default;
+	margin-left: 2rem;
+	font-weight: 700;
+}
+
 .content-shopping-cart {
 	display: flex;
 	flex-direction: column;
@@ -101,6 +108,49 @@ html {
 
 .container-navbar {
 	background-color: var(--primary-color);
+}
+
+.container-navbar {
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 0.7fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.container-logo i {
+    font-size: 3rem;
+}
+
+.container-logo h1 a {
+    text-decoration: none;
+    color: #4A4A49;
+    font-size: 3rem;
+    letter-spacing: -1px;
+    font-weight: 700;
+    margin-left: 80px;
+}
+
+.navbar {
+    justify-self: center;
+}
+
+.search-form {
+    justify-self: center;
+}
+
+.container-user {
+    justify-self: end;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .navbar {
@@ -116,7 +166,7 @@ html {
 
 .menu {
 	display: flex;
-	gap: 2rem;
+	gap: 3rem;
 }
 
 .menu li {
@@ -160,7 +210,7 @@ html {
 	border: 2px solid #F9FCFC;
 	border-radius: 2rem;
 	background-color: #F9FCFC;
-	height: 4.4rem;
+	height: 4rem;
 	overflow: hidden;
 }
 
@@ -186,12 +236,12 @@ html {
 	align-items: center;
 	justify-content: center;
 	height: 100%;
-	padding: 1rem;
+	padding: 2rem;
 }
 
 .btn-search i {
 	font-size: 2rem;
-	color: #fff;
+	color: #F9FCFC;
 }
 
 .banner {
@@ -559,6 +609,7 @@ html {
 }
 
 .content-card-product .price span {
+	
 	font-size: 1.5rem;
 	font-weight: 400;
 	text-decoration: line-through;
@@ -599,6 +650,11 @@ html {
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
+}
+
+.btn-read-more {
+	display: none;
+	text-decoration-line: none
 }
 
 .button-group-blog {
@@ -738,10 +794,11 @@ html {
 	font-weight: 300;
 }
 
-.information ul li a:hover,
+.information ul li a:hover
 .my-account ul li a:hover {
+	text-decoration: none;
 	color: #F9FCFC;
-;
+	font-weight: 300;
 }
 
 
@@ -770,7 +827,7 @@ html {
 }
 
 .content input::-webkit-input-placeholder {
-	color: #eee;
+	color: #F9FCFC;
 }
 
 .content button {
@@ -790,6 +847,7 @@ html {
 	background-color: var(--background-color);
 	color: var(--primary-color);
 }
+
 
 
 
@@ -994,3 +1052,4 @@ html {
 		font-size: 1.6rem;
 	}
 }
+
