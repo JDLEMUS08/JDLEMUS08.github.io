@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="Prueba.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
+
 	<body>
 		<header>
 
@@ -47,9 +48,9 @@
 
 		<section class="banner">
 			<div class="content-banner">
-				<p>MÁS VENDIDO</p>
-				<h2>New Balance 9060 en<br />negro monocromático</h2>
-				<a href="#">Comprar ahora</a>
+				<p>TENDENCIAS</p>
+				<h2>Labubu: ¿qué son y por<br /> qué son tan popular?</h2>
+				<a href="https://www.glamour.mx/articulos/labubu-que-son-y-por-que-se-han-vuelto-tan-populares">Información</a>
 			</div>
 		</section>
 
@@ -537,6 +538,22 @@
 			 <button id="toggle-theme" aria-label="Alternar tema" class="theme-toggle-btn">
             <i id="theme-icon" class="fa-solid fa-sun"></i>
         </button>
+        <button id="chatbot-btn" aria-label="Abrir chatbot" class="chatbot-btn">
+        <i class="fa-solid fa-comments"></i>
+    </button>
+    <div id="chatbot-window" class="chatbot-window" style="display:none;">
+        <div class="chatbot-header">
+            <span>BeeFast Chatbot</span>
+            <button id="close-chatbot" class="close-chatbot">&times;</button>
+        </div>
+        <div class="chatbot-messages">
+            <div class="chatbot-message chatbot-message-bot">¡Hola! ¿En qué puedo ayudarte?</div>
+        </div>
+        <form id="chatbot-form" class="chatbot-form">
+            <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." autocomplete="off" />
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
         <style>
 			body.dark-mode .price {
     color: #F9FCFC;
@@ -546,7 +563,7 @@
                 bottom: 30px;
                 right: 30px;
                 z-index: 9999;
-                background: #F9FCFC;
+                background: #FFDF8C;
                 border: none;
                 border-radius: 50%;
                 width: 55px;
@@ -556,12 +573,10 @@
                 justify-content: center;
                 cursor: pointer;
             }
-            .theme-toggle-btn:hover {
-                background: #F9FCFC;
-            }
+           
             #theme-icon {
                 font-size: 2rem;
-                color: #ffdf8c;
+                color: #f5f5f3;
                 transition: color 0.3s;
             }
             body.dark-mode {
@@ -569,10 +584,10 @@
                 color: #F9FCFC;
             }
             body.dark-mode .theme-toggle-btn {
-                background: #4a4a49;
+                background: #EFDCFF;
             }
             body.dark-mode #theme-icon {
-                color: #efdcff;
+                color: #4A4A49;
             }
 			body.dark-mode p {
     			color: #F9FCFC;
@@ -727,7 +742,7 @@
 			border: 2px solid #4A4A49;
 			border-radius: 2rem;
 			background-color: #4A4A49;
-			height: 4.4rem;
+			height: 3.8rem;
 			overflow: hidden;
 			}
 
@@ -776,7 +791,206 @@
 		    color: #F9FCFC !important;
 			}
 
-			</style>
+			.content-banner p {
+			color: var(--primary-color);
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+			font-weight: 500;
+		}
+
+			.content-banner h2 {
+			color: #EFDCFF;
+			font-size: 3.5rem;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+			body.dark-mode .audio-section {
+			background: linear-gradient(90deg, #ffdf8c 20%, #efdcff 80%);
+			padding: 40px 0;
+			text-align: center;
+			margin: 0rem auto;
+			max-width: 20000px;
+			}
+
+			body.dark-mode .audio-section h2 {
+			font-size: 2.4rem;
+			margin-bottom: 18px;
+			color: #4A4A49;
+			font-weight: 600;
+			letter-spacing: 1px;
+			}
+
+			body.dark-mode .audio-section audio {
+			width: 90%;
+			max-width: 400px;
+			outline: none;
+			border-radius: 8px;
+			background: #F9FCFC;
+			margin: 0 auto;
+			display: block;
+			}
+
+			body.dark-mode .card-category p {
+				font-size: 2.5rem;
+				color: #EFDCFF;
+				text-transform: capitalize;
+				position: relative;
+			}
+
+			body.dark-mode .card-category p::after {
+				content: '';
+				width: 2.5rem;
+				height: 2px;
+				background-color: #FFDF8C;
+				position: absolute;
+				bottom: -1rem;
+				left: 50%;
+				transform: translate(-50%, 50%);
+			}
+
+			body.dark-mode .card-category span {
+				font-size: 1.6rem;
+				color: #EFDCFF;
+				cursor: pointer;
+			}
+
+
+			.chatbot-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 9999;
+            background: #FFDF8C;
+            border: none;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .chatbot-btn:hover {
+            background: #EFDCFF;
+        }
+        .chatbot-btn i {
+            font-size: 2rem;
+            color: #F9FCFC;
+        }
+        .chatbot-window {
+            position: fixed;
+            bottom: 100px;
+            left: 30px;
+            width: 320px;
+            max-width: 90vw;
+            background: #F9FCFC;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+            z-index: 10000;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .chatbot-header {
+            background: #FFDF8C;
+            color: #4A4A49;
+            padding: 1rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-chatbot {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #4A4A49;
+            cursor: pointer;
+        }
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            background: #F9FCFC;
+            overflow-y: auto;
+            font-size: 1rem;
+        }
+        .chatbot-message {
+            margin-bottom: 0.8rem;
+            padding: 0.6rem 1rem;
+            border-radius: 1rem;
+            max-width: 80%;
+        }
+        .chatbot-message-bot {
+            background: #EFDCFF;
+            color: #4A4A49;
+            align-self: flex-start;
+        }
+        .chatbot-message-user {
+            background: #FFDF8C;
+            color: #4A4A49;
+            align-self: flex-end;
+            text-align: right;
+        }
+        .chatbot-form {
+            display: flex;
+            border-top: 1px solid #EFDCFF;
+            background: #F9FCFC;
+        }
+        .chatbot-form input {
+            flex: 1;
+            border: none;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border-radius: 0;
+            outline: none;
+            background: #F9FCFC;
+            color: #4A4A49;
+        }
+        .chatbot-form button {
+            background: #FFDF8C;
+            border: none;
+            padding: 0 1rem;
+            cursor: pointer;
+            color: #4A4A49;
+            font-size: 1.3rem;
+        }
+        .chatbot-form button:hover {
+            background: #EFDCFF;
+        }
+        body.dark-mode .chatbot-window {
+            background: #4A4A49;
+            color: #F9FCFC;
+        }
+        body.dark-mode .chatbot-header {
+            background: #EFDCFF;
+            color: #4A4A49;
+        }
+        body.dark-mode .chatbot-messages {
+            background: #4A4A49;
+            color: #F9FCFC;
+        }
+        body.dark-mode .chatbot-message-bot {
+            background: #FFDF8C;
+            color: #4A4A49;
+        }
+        body.dark-mode .chatbot-message-user {
+            background: #EFDCFF;
+            color: #4A4A49;
+        }
+        body.dark-mode .chatbot-form {
+            background: #4A4A49;
+            border-top: 1px solid #FFDF8C;
+        }
+        body.dark-mode .chatbot-form input {
+            background: #4A4A49;
+            color: #F9FCFC;
+        }
+        body.dark-mode .chatbot-form button {
+            background: #EFDCFF;
+            color: #4A4A49;
+        }
+        </style>
         <script>
 
 			
@@ -803,6 +1017,270 @@
                 }
             });
         </script>
-		</body>
+        <script>
+        const chatbotBtn = document.getElementById('chatbot-btn');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const closeChatbot = document.getElementById('close-chatbot');
+        const chatbotForm = document.getElementById('chatbot-form');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotMessages = document.querySelector('.chatbot-messages');
+
+        chatbotBtn.addEventListener('click', () => {
+            chatbotWindow.style.display = 'flex';
+        });
+        closeChatbot.addEventListener('click', () => {
+            chatbotWindow.style.display = 'none';
+        });
+        chatbotForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const userMsg = chatbotInput.value.trim();
+            if (userMsg) {
+            const userDiv = document.createElement('div');
+            userDiv.className = 'chatbot-message chatbot-message-user';
+            userDiv.textContent = userMsg;
+            chatbotMessages.appendChild(userDiv);
+            chatbotInput.value = '';
+            setTimeout(() => {
+            const botDiv = document.createElement('div');
+            botDiv.className = 'chatbot-message chatbot-message-bot';
+            botDiv.textContent = '¡Gracias por tu mensaje! Pronto te responderemos.';
+            chatbotMessages.appendChild(botDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }, 700);
+             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+        });
+    </script>
+	</body>
+
+<div id="cart-modal" class="cart-modal" style="display:none;">
+    <div class="cart-modal-header">
+        <span>Carrito de compras</span>
+        <button id="close-cart" class="close-cart">&times;</button>
+    	</div>
+    	<div class="cart-modal-body">
+        <ul id="cart-items"></ul>
+    	</div>
+    	<div class="cart-modal-footer">
+        <span id="cart-total" class="cart-total"></span> 
+        <button id="empty-cart" class="empty-cart">Vaciar carrito</button>
+        <button id="buy-all" class="buy-all">Pagar ahora</button>
+    </div>
+</div>
+        <style>
+    .cart-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        max-width: 95vw;
+        background: #F9FCFC;
+        border-radius: 1rem;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        z-index: 10001;
+        display: flex;
+        flex-direction: column;
+    }
+    .cart-modal-header {
+        background: #FFDF8C;
+        color: #4A4A49;
+        padding: 1rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .close-cart {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #4A4A49;
+        cursor: pointer;
+    }
+    .cart-modal-body {
+        flex: 1;
+        padding: 1rem;
+        background: #F9FCFC;
+        overflow-y: auto;
+    }
+    #cart-items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    #cart-items li {
+        margin-bottom: 0.8rem;
+        padding: 0.6rem 1rem;
+        border-radius: 1rem;
+        background: #EFDCFF;
+        color: #4A4A49;
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cart-item-remove {
+        background: #FFDF8C;
+        color: #4A4A49;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.3rem 0.7rem;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+    }
+    .cart-modal-footer {
+        padding: 1rem;
+        background: #FFDF8C;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .cart-total {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #4A4A49;
+        margin-bottom: 0.5rem;
+    }
+    .empty-cart, .buy-all {
+        background: #EFDCFF;
+        color: #4A4A49;
+        border: none;
+        padding: 0.7rem 1.2rem;
+        border-radius: 0.7rem;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+    }
+    .empty-cart:hover, .buy-all:hover {
+        background: #FFDF8C;
+    }
+    body.dark-mode .cart-modal {
+        background: #4A4A49;
+        color: #F9FCFC;
+    }
+    body.dark-mode .cart-modal-header {
+        background: #EFDCFF;
+        color: #4A4A49;
+    }
+    body.dark-mode .cart-modal-body {
+        background: #4A4A49;
+        color: #F9FCFC;
+    }
+    body.dark-mode #cart-items li {
+        background: #FFDF8C;
+        color: #4A4A49;
+    }
+    body.dark-mode .cart-modal-footer {
+        background: #EFDCFF;
+    }
+    body.dark-mode .cart-total {
+        color: #F9FCFC;
+    }
+    body.dark-mode .empty-cart, body.dark-mode .buy-all {
+        background: #FFDF8C;
+        color: #4A4A49;
+    }
+</style>
+<script>
+
+		const cartIcon = document.querySelector('.fa-basket-shopping');
+		const cartModal = document.getElementById('cart-modal');
+		const closeCart = document.getElementById('close-cart');
+		const cartItemsList = document.getElementById('cart-items');
+		const buyAllBtn = document.getElementById('buy-all');
+		const emptyCartBtn = document.getElementById('empty-cart');
+		const cartTotal = document.getElementById('cart-total');
+		let cart = [];
+
+
+	function getProductElements() {
+        return document.querySelectorAll('.card-product');
+    	}
+    	function getProductInfo(card) {
+        const name = card.querySelector('h3').textContent.trim();
+        const priceText = card.querySelector('.price').childNodes[0].textContent.trim();
+        const price = parseInt(priceText.replace(/[^\d]/g, ''));
+        return { name, price };
+    	}
+    	getProductElements().forEach(card => {
+        const addBtn = card.querySelector('.add-cart');
+      	addBtn.addEventListener('click', () => {
+        const info = getProductInfo(card);           
+		const found = cart.find(p => p.name === info.name);
+        if (found) {                found.qty += 1;
+        } else {
+            cart.push({ ...info, qty: 1 });
+		}
+        cartModal.style.display = 'flex';
+ 	     renderCartItems();
+     });
+    	
+	});
+    	cartIcon.addEventListener('click', () => {
+        cartModal.style.display = 'flex';
+        renderCartItems();
+    	});
+    	closeCart.addEventListener('click', () => {
+        cartModal.style.display = 'none';
+    	});
+    	buyAllBtn.addEventListener('click', () => {
+       	 if (cart.length === 0) {
+        alert('No hay productos en el carrito.');
+         return;
+      	  }
+        cartModal.innerHTML = `
+            <div class='cart-modal-header'>
+                <span>Pago realizado</span>
+                <button id='close-cart' class='close-cart'>&times;</button>
+            </div>
+            <div class='cart-modal-body'>
+                <p>¡Gracias por tu compra! Recibirás un correo con la confirmación.</p>
+            </div>
+        `;
+        document.getElementById('close-cart').onclick = () => {
+            cartModal.style.display = 'none';
+            location.reload();
+        };
+        cart = [];
+   		 });
+   		 emptyCartBtn.addEventListener('click', () => {
+        cart = [];
+        renderCartItems();
+  		  });
+   		 function renderCartItems() {
+        cartItemsList.innerHTML = '';
+        let total = 0;
+        cart.forEach(product => {
+        total += product.price * product.qty;
+        const li = document.createElement('li');
+        li.innerHTML = `
+                <span>${product.name} x${product.qty} - $${(product.price * product.qty).toLocaleString()}</span>
+                <button class='cart-item-remove'>Eliminar</button>
+            `;
+            li.querySelector('.cart-item-remove').addEventListener('click', () => {
+                cart = cart.filter(p => p.name !== product.name);
+                renderCartItems();
+            });
+            cartItemsList.appendChild(li);
+        });
+        cartTotal.textContent = cart.length ? `Total: $${total.toLocaleString()}` : 'Carrito vacío';
+        document.getElementById('cart-calculator').style.display = cart.length ? 'block' : 'none';
+        document.getElementById('calculator-result').textContent = '';
+    	}
+   		 document.getElementById('calculator-btn').addEventListener('click', function() {
+        const input = parseInt(document.getElementById('calculator-input').value);
+        const total = cart.reduce((acc, p) => acc + p.price * p.qty, 0);
+        if (!isNaN(input)) {
+        document.getElementById('calculator-result').textContent = `Total + ${input}: $${(total + input).toLocaleString()}`;
+        } else {
+        document.getElementById('calculator-result').textContent = 'Ingresa un valor válido.';
+        }
+   	 });
+</script>
 
 </html> 
+
